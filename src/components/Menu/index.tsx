@@ -16,7 +16,7 @@ export const Menu = () => {
           <Link to="/posts">Posts</Link>
         </li>
         <li>
-          <Link to="/posts/10">Post 10</Link>
+          <Link to="/posts/10?page=25">Post 10</Link>
         </li>
         <li>
           <Link to="/redirect">Redirect</Link>
