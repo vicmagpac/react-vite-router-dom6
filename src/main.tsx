@@ -6,6 +6,7 @@ import './styles/global.css';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Menu } from './components/Menu';
+import { Posts } from './components/Posts';
 import { Post } from './components/Post';
 import { Redirect } from './components/Redirect';
 import { NotFound } from './components/NotFound';
@@ -25,12 +26,16 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
           />
         <Route 
           path='/posts'
-          element={<Post />}
+          element={<Posts />}
           />
-        <Route 
+        {/* <Route 
           path='/posts/:id'
-          element={<Post />}
-          />
+          element={<Posts />}
+          /> */}
+
+        <Route path='/posts' element={<Posts />}>
+          <Route path=':id' element={<Post />} />
+        </Route>
         <Route
           path='/redirect'
           element={<Redirect />}
